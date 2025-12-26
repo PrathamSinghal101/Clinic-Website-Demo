@@ -1,0 +1,241 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   HEADER & NAVBAR
+===================== */
+header {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Nav links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 15px;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  background: #f2f7ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  color: #0b5ed7;
+}
+
+.hero p {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0b5ed7;
+}
+
+/* Cards / Services / Gallery */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #0b5ed7;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer .credit {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+footer .credit a {
+  color: #dbe9ff;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0b5ed7;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Logo text smaller */
+  .logo {
+    font-size: 16px;
+  }
+}
+
+/* ===== HAMBURGER FIX ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0b5ed7;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
